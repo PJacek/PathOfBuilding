@@ -389,7 +389,7 @@ for _, targetVersion in ipairs(targetVersionList) do
 	local missing = { }
 	for _, minion in pairs(verData.minions) do
 		for _, skillId in ipairs(minion.skillList) do
-			if launch.devMode and not verData.skills[skillId] and not missing[skillId] then
+			if launch.devMode and not verData.skills[skillId] and not missing[skillId] and targetVersion ~= "2_6" then
 				ConPrintf("'%s' missing skill '%s'", minion.name, skillId)
 				missing[skillId] = true
 			end

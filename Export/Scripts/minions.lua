@@ -32,6 +32,15 @@ local itemClassMap = {
 
 local directiveTable = { }
 
+-- #ignoreSkill <SkillId>[ <SkillId>[...]]
+-- Removes skill(s) from the next monster
+directiveTable.ignoreSkill = function(state, args, out)
+	state.ignoredSkillList = { }
+	for skill in args:gmatch("[%a%d]+") do
+		state.ignoredSkillList[skill] = true
+	end
+end
+
 -- #monster <MonsterId> [<Name>]
 directiveTable.monster = function(state, args, out)
 	local varietyId, name = args:match("(%S+) (%S+)")
@@ -106,8 +115,11 @@ directiveTable.emit = function(state, args, out)
 	end
 	out:write('\tskillList = {\n')
 	for _, grantedEffect in ipairs(monsterVariety.GrantedEffects) do
-		out:write('\t\t"', grantedEffect.Id, '",\n')
+		if not state.ignoredSkillList or not state.ignoredSkillList[grantedEffect.Id] then
+			out:write('\t\t"', grantedEffect.Id, '",\n')
+		end
 	end
+	state.ignoredSkillList = nil
 	for _, skill in ipairs(state.extraSkillList) do
 		out:write('\t\t"', skill, '",\n')
 	end
