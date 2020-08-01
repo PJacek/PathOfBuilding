@@ -68,6 +68,10 @@ local skills, mod, flag, skill = ...
 #flags attack melee
 #mods
 
+#skill MonsterQuickDodgeRunUnarmed Dash
+#flags spell
+#mods
+
 #skill SkeletonMinionProjectileCold Cold Projectile
 #flags spell projectile
 #mods

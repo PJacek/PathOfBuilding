@@ -239,7 +239,6 @@ minions["RaisedSkeleton"] = {
 	limit = "ActiveSkeletonLimit",
 	skillList = {
 		"Melee",
-		"MonsterQuickDodgeRunUnarmed",
 	},
 	modList = {
 		mod("BlockChance", "BASE", 30), -- MonsterAttackBlock30Bypass15 [monster_base_block_% = 30] [base_block_%_damage_taken = 15]

@@ -245,6 +245,7 @@ local skills, mod, flag, skill = ...
 			mod("MinionModifier", "LIST", { mod = mod("Damage", "MORE", nil) }, 0, 0, { type = "Condition", var = "FeedingFrenzyActive" }),
 		},
 	},
+#baseMod mod("ExtraMinionSkill", "LIST", { skillId = "MonsterQuickDodgeRunUnarmed", minionList = { "RaisedSkeleton" }})
 #mods
 
 #skill SupportRemoteMine2

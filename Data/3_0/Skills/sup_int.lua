@@ -1851,6 +1851,7 @@ skills["SupportMinionOffensiveStance"] = {
 		},
 	},
 	baseMods = {
+		mod("ExtraMinionSkill", "LIST", { skillId = "MonsterQuickDodgeRunUnarmed", minionList = { "RaisedSkeleton" }}),
 	},
 	qualityStats = {
 		{ "puppet_master_base_duration_ms", 50 },

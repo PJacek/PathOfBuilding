@@ -43,6 +43,7 @@ local minions, mod = ...
 
 #monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonStandard RaisedSkeleton
 #limit ActiveSkeletonLimit
+#ignoreSkill MonsterQuickDodgeRunUnarmed
 #emit
 
 #monster Metadata/Monsters/RaisedSkeletons/RaisedSkeletonSpellcaster1Army RaisedSkeletonCaster

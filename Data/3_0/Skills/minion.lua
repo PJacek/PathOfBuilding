@@ -444,6 +444,35 @@ skills["RagingSpiritMeleeAttack"] = {
 		[23] = { -10, levelRequirement = 74, statInterpolation = { 1, }, },
 	},
 }
+skills["MonsterQuickDodgeRunUnarmed"] = {
+	name = "Dash",
+	hidden = true,
+	color = 2,
+	description = "Performs a series of quick teleports towards a targeted location. If using the \"Attack in Place\" option, the direction is reversed. Shares a cooldown with other Blink skills.",
+	skillTypes = { [SkillType.Spell] = true, [SkillType.MovementSkill] = true, [SkillType.TravelSkill] = true, [SkillType.BlinkSkill] = true, [SkillType.Type96] = true, },
+	statDescriptionScope = "skill_stat_descriptions",
+	castTime = 0.15,
+	baseFlags = {
+		spell = true,
+	},
+	baseMods = {
+	},
+	qualityStats = {
+		{ "base_cooldown_speed_+%", 0.5 },
+	},
+	stats = {
+		"base_cooldown_speed_+%",
+		"skill_art_variation",
+		"base_deal_no_damage",
+		"skill_cannot_be_interrupted",
+		"skill_cannot_be_knocked_back",
+		"skill_cannot_be_stunned",
+		"spell_cast_time_cannot_be_modified",
+	},
+	levels = {
+		[1] = { 0, 2, cooldown = 2, levelRequirement = 1, statInterpolation = { 1, 1, }, },
+	},
+}
 skills["SkeletonMinionProjectileCold"] = {
 	name = "Cold Projectile",
 	hidden = true,
