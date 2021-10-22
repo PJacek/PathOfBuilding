@@ -2923,7 +2923,7 @@ return {
 			name="SupportTypes",
 			refTo="ActiveSkillType",
 			type="Key",
-			width=330
+			width=170
 		},
 		[4]={
 			list=false,
